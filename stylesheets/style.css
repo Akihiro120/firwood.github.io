@@ -1,75 +1,266 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    /*Default*/
+/* base styles */
+h1, p, a {
     font-family: Montserrat, sans-serif;
-    padding: 0;
-    margin: 0;
-
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/*Nav Bar*/
-header {
-    background-color: #1c1c1c;
-    background-image: none;
-    opacity: 0.95;
     color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-
-    padding: 22px 5%
 }
 
-header h1 {
-    background-color: #1c1c1c;
-    background-image: none;
-    font-style: medium;
+h1 {
     font-weight: 500;
 }
 
-header h1.navHeading {
-    margin-right: auto;
+* {
+    background-image: url("../images/background.jpg");
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+/* end base styles */
 
-header ul {
-    background-color: #1c1c1c;
+/* nav bar */
+header h1, ul, li, a, button, .navBar {
     background-image: none;
-    list-style: None;
-}
-
-header li {
-    background-color: #1c1c1c;
-    background-image: none;
-    display: inline;
-    padding: 0px 20px
-}
-
-header a {
-    background-color: #1c1c1c;
-    background-image: none;
+    background-color: rgba(28, 28, 28, 0.0);
     text-decoration: None;
-    color: white;
 }
 
-header .githubButtonImage {
-    background-color: #1c1c1c;
-    background-image: none;
+.navBar {
+    background-color: rgba(28, 28, 28, 1);
+    transition: 0.5s;
+}
+
+.navBar:hover {
+    background-color: rgba(28, 28, 28, 1);
+}
+
+header {
+    /*flex box*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    padding: 15px 5%;
+}
+
+.navHeading, .navHeadingA {
+    margin-right: auto;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navHeading:hover {
+    color: rgb(200, 200, 200);
+}
+
+.navHeadingA::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 3px;
+    top: 35px;
+    left: 0%;
+    background-color: rgba(255, 255, 255, 1.0);
+
+    transition: 0.75s ease-out;
+}
+
+.navHeadingA:hover::before {
+    width: 100%;
+}
+
+.navItem {
+    position: relative;
+    display: inline;
+    list-style: None;
+    padding: 0px 20px;
+}
+
+.navItemA::before {
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 3px;
+    top: 25px;
+    left: 20%;
+    background-color: rgba(255, 255, 255, 0.0);
+    color: white;
+
+    transition: 0.5s ease-out;
+}
+
+.navItemA:hover::before {
+    background-color: rgba(255, 255, 255, 1.0);
+    top: 20px;
+}
+
+/* github button */
+.githubButton {
+    border: 0;
+    margin: 0;
+    padding: 0px 20px;
+}
+
+.githubButtonImage {
+    background-image: None;
     width: 40px;
     height: 40px;
 }
 
-header button {
-    background-color: #1c1c1c;
-    background-image: none;
-    border: None;
-    padding: 0px 20px;
+/* end nav bar */
+
+/* body */
+body {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-header button:hover {
+.content {
+    flex: 1;
+}
+
+.projectShowcase {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 10px 10px;
+}
+
+.project {
+    background-image: none;
+    background: linear-gradient(to bottom right, black, grey);
+    width: 50%;
+    height: 82vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 1s;
+}
+
+.project:hover {
+    background: linear-gradient(to bottom right, grey, black);
+}
+
+.project p {
+    background: none;
+    text-align: center;
+}
+
+.project h1 {
+    background: none;
+    text-align: center;
+    font-size: bold;
+}
+
+.project {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project button {
+    background-color: #37b6ed;
+    width: 125px;
+    height: 40px;
+    border: 0px;
+    border-radius: 50px;
+    font-weight: medium;
+    top: 0px;
+
+    opacity: 0.0;
+
+    transition: 0.5s ease-out;
+}
+
+.project:hover button {
+    background-color: #37b6ed;
+    width: 125px;
+    height: 40px;
+    border: 0px;
+    border-radius: 50px;
+    font-weight: medium;
+    top: 10px;
+
+    opacity: 1.0;
+    transform: translate(0.0, 10px);
+    
+}
+
+.project button:hover {
+    background-color: #228cba;
     cursor: pointer;
 }
+
+.project h1 {
+    z-index: 19;
+    transition: 1.0s;
+}
+
+.project:hover{
+    opacity: 1.0;
+    transform: scale(1.1);
+}
+
+.project:hover h1 {
+    transform: scale(0.9);
+    transform: translate(0.0, -10px);
+}
+
+#pAtmosphere {
+    background-image: url("../images/atmosphereCover.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#pAtmosphere::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(100, 100, 100, 0.5);
+
+    transition: 0.5s;
+}
+
+#pAtmosphere:hover::before {
+    background-color: rgba(100, 100, 100, 0.0);
+}
+
+#pAtmosphere:hover{
+    opacity: 1.0;
+    transform: scale(1.1);
+}
+
+/* end body */
+
+/* footer */
+
+footer, p{
+    background-image: none;
+    background-color: rgba(28, 28, 28, 1.0);
+    text-decoration: None;
+    padding: 5px 10%;
+    text-align: center;
+
+}
+
+p.github {
+    color: grey;
+    font-size: 10px;
+}
+
+/* end footer */

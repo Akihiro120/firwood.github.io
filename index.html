@@ -6,13 +6,37 @@
         <title>Firwood Studio</title>
     </head>
     <!--Nav Bar-->
-    <header>
-        <h1 class="navHeading">Firwood Studio</h1>
+    <header class="navBar">
+        <a href="index.html" class="navHeadingA"><h1 class="navHeading">Firwood Studio</h1></a>
         <ul>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Team</a></li>
-            <li><a href="">About</a></li>
+            <li class="navItem"><a href="#projectHead" class="navItemA">Projects</a></li>
+            <li class="navItem"><a href="#aboutHead" class="navItemA">About</a></li>
+            <li class="navItem"><a href="#teamHead" class="navItemA">Team</a></li>
         </ul>
-        <button><img src="images/gitIcon.png" class="githubButtonImage"></button>
+        <button class="githubButton"><a href="https://github.com/Akihiro120"><img src="images/gitIcon.png" class="githubButtonImage"></a></button>
     </header> 
+    <body class="content">
+        <div class="projectShowcase" id="projectHead">
+            <div class="project">
+                <h1>Fishing</h1>
+                <a href=""><button>Learn More</button></a>
+            </div>
+            <div class="project" id="pAtmosphere">
+                <h1>Project: Atmosphere</h1>
+                <a href=""><button>Learn More</button></a>
+            </div>
+            <div class="project">
+                <h1>Coming Soon</h1>
+                <a href=""><button>Learn More</button></a>
+            </div>
+            <div class="project">
+                <h1>Coming Soon</h1>
+                <a href=""><button>Learn More</button></a>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <p class="copyright">Copyright (c) 2024 Firwood Studio. All Rights Reserved.</p>
+        <p class="github">Hosted on Github Pages</p>
+    </footer>
 </html>
