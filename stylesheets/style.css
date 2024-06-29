@@ -11,7 +11,7 @@ h1 {
 }
 
 * {
-    background-image: url("../images/background.jpg");
+    background: linear-gradient(to top right, black , grey);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -26,6 +26,7 @@ header h1, ul, li, a, button, .navBar {
 }
 
 .navBar {
+    z-index: 10;
     background-color: rgba(28, 28, 28, 1);
     transition: 0.5s;
 }
@@ -117,9 +118,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    scroll-behavior: smooth;
 }
 
 .content {
+    scroll-behavior: smooth;
     flex: 1;
 }
 
@@ -133,6 +136,8 @@ body {
 }
 
 .project {
+    scroll-behavior: smooth;
+    z-index: 0;
     background-image: none;
     background: linear-gradient(to bottom right, black, grey);
     width: 50%;
@@ -142,10 +147,11 @@ body {
     align-items: center;
     justify-content: center;
 
-    transition: 1s;
+    transition: 0.2s;
 }
 
 .project:hover {
+    z-index: 1;
     background: linear-gradient(to bottom right, grey, black);
 }
 
@@ -177,7 +183,7 @@ body {
 
     opacity: 0.0;
 
-    transition: 0.5s ease-out;
+    transition: 0.2s ease-out;
 }
 
 .project:hover button {
@@ -250,6 +256,7 @@ body {
 /* footer */
 
 footer, p{
+    z-index: 10;
     background-image: none;
     background-color: rgba(28, 28, 28, 1.0);
     text-decoration: None;
