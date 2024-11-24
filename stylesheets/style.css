@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+	 font-family: "Instrument Sans";
+	 color: white;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	 margin: 0px;
+	 overflow: hidden
+}
+
+#ambient_canvas {
+	 position: absolute;
+	 z-index: 0;
+}
+
+#grid {
+	 /*grid */
+	 display: grid;
+
+	 height: 100vh;
+	 width: 100%;
+	
+	 grid-template-columns: 450px 1fr;
+	 grid-template-rows: 1fr;
+}
+
+#main {
+	 /*gradient background*/
+	 background-image: linear-gradient(128deg, #041515, #2D0001);
+
+	 /*grid alignment*/
+	 grid-column: 2 / 3;
+	 grid-row: 1 / 2;
+
+	 /*inner grid*/
+	 display: grid;
+
+	 grid-template-rows: repeat(24, 1fr);
+	 grid-template-columns: 50px 50px 1fr;
+}
+
+#navigation {
+
+	 z-index: 1;
+	 /*grid alignment*/
+	 background-color: #1A2326;
+
+	 grid-column: 1 / 2;
+	 grid-row: 1 / 2;
+
+	 display: grid;
+	 grid-template-rows: 50px 200px 50px 20px 125px 75px 75px 75px 100px 100px 1fr;
+	 grid-template-columns: 1fr 200px 1fr
+}
+
+/*icon buttons*/
+#github_button, #linkedin_button {
+	 background-color: transparent;
+	 border-radius: 150px;
+	 border: 0px;
+
+
+	 /*animation*/
+	 transition: transform 1.0s ease-in-out;
+}
+
+#github_button img, #linkedin_button img {
+	 width: 40px;
+	 height: 40px;
+}
+
+#github_button :hover, #linkedin_button :hover {
+	 cursor: pointer;
+
+	 transform: scale(1.1);
+}
+
+/*navigation*/
+#nav {
+}
+
+.nav_item {
+	 text-align: center;
+	 font-size: 18px;
+	 border: 0px;
+	 text-decoration: none;
+	 color: white;
+}
+
+.nav_item:hover {
+	 color: grey;
+}
+
+#item1 {
+	 grid-column: 2 / 3;
+	 grid-row: 6 / 7;
+}
+#item2 {
+	 grid-column: 2 / 3;
+	 grid-row: 7 / 8;
+}
+#item3 {
+	 grid-column: 2 / 3;
+	 grid-row: 8 / 9;
+}
+
+/*main*/
+#view_project_button {
+	 border-radius: 5px;
+	 border-color: white;
+	 border-width: 2px;
+	 border-style: solid;
+	 background-color: transparent;
+
+	 font-size: 18px;
+
+	 width: 150px;
+	 height: 40px;
+
+	 grid-row: 6 / 7;
+	 grid-column: 3 / 4;
+
+	 align-self: center;
+	 z-index: 1;
+
+	 transition: 1s ease;
+}
+
+#view_project_button:hover {
+	 cursor: pointer;
+
+	 transform: scale(1.05);
+	 border-color: #B6B6B6;
+	 color: grey;
+}
+
+#aspiring {
+	 font-size: 40px;
+
+	 grid-row: 5 / 6;
+	 grid-column: 3 / 4;
+}
+
+#name {
+	 grid-column: 2 / 3;
+	 grid-row: 3 / 4;
+	 text-align: center;
+	 align-self: center;
+
+}
+
+#akihiro {
+	 color: #414141;
+	 text-align: center;
+	 grid-column: 2 / 3;
+	 grid-row: 4 / 5;
+}
+
+#profile {
+	 width: 200px;
+	 height: 200px;
+
+	 border-radius: 150px;
+
+	 grid-column: 2 / 3;
+	 grid-row: 2 / 3;
+}
+
+#links {
+	 grid-column: 2 / 3;
+	 grid-row: 10 / 11;
+
+	 text-align: center;
+	 align-self: center;
+}
